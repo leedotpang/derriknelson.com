@@ -2,13 +2,13 @@
 <html lang="en-US">
 	<head>
 		<title>Derrik Nelson</title>
-		<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	</head>
 	
 	<body>
 		
-		<?php echo "PHP works :p"; ?>
+		<h1><?php echo "PHP works :p"; ?></h1>
 		
 		<button>Test jQuery</button>
 		
