@@ -1,9 +1,145 @@
 /* This code is only meant for previewing your Reflow design. */
 .primaryContainer {
-   height: auto;
-   margin-left: auto;
-   margin-right: auto;
-   min-height: 100%;
-   width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 90%;
+    background-color: rgb(244, 239, 216);
+}
+
+#Nav {
+    float: left;
+    height: 40px;
+    margin-left: 0%;
+    margin-top: 161px;
+    clear: none;
+    width: 100%;
+    background-color: rgb(46, 46, 46);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+body {
+    background-color: rgb(244, 239, 216);
+}
+
+#text {
+    float: left;
+    font-size: 100px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin-left: 0px;
+    margin-top: 40px;
+    clear: none;
+    min-height: 0px;
+    font-family: brawler;
+    display: block;
+}
+
+#text1 {
+    float: left;
+    font-size: 25px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: both;
+    min-height: 0px;
+    font-family: brawler;
+    display: block;
+}
+
+#Header {
+    float: left;
+    height: 165px;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: none;
+    width: 100%;
+    display: block;
+}
+
+#text2 {
+    float: none;
+    font-size: 20px;
+    width: auto;
+    height: 40px;
+    text-align: center;
+    font-weight: normal;
+    line-height: 40px;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-top: 0px;
+    clear: none;
+    min-height: 0px;
+    font-family: open-sans;
+    color: rgb(255, 255, 255);
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+   #Nav {
+        width: 100%;
+        margin-top: 21px;
+        margin-left: 0%;
+        clear: both;
+        height: 40px;
+        display: block;
+   }
+
+   #text {
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0px;
+        clear: none;
+        display: block;
+   }
+
+   #text1 {
+        width: 100%;
+        margin-top: 0px;
+        margin-left: 0%;
+        clear: both;
+        display: block;
+   }
+
+   #Header {
+        float: left;
+        height: 165px;
+        margin-left: 0%;
+        margin-top: 0px;
+        clear: none;
+        width: 100%;
+        display: block;
+   }
+
+   #text2 {
+        float: none;
+        font-size: 20px;
+        width: auto;
+        height: 40px;
+        text-align: center;
+        font-weight: normal;
+        line-height: 40px;
+        word-wrap: break-word;
+        margin-left: auto;
+        margin-top: 0px;
+        clear: none;
+        min-height: 0px;
+        font-family: open-sans;
+        color: rgb(255, 255, 255);
+        margin-right: auto;
+   }
 }
 

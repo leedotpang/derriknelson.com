@@ -1,9 +1,93 @@
 /* This code is only meant for previewing your Reflow design. */
 .primaryContainer {
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
-    width: 90%;
+   height: auto;
+   margin-left: auto;
+   margin-right: auto;
+   min-height: 100%;
+   width: 90%;
+   background-color: rgb(255, 255, 255);
+}
+
+#box1 {
+   float: left;
+   height: 1px;
+   margin-left: 0%;
+   margin-top: 306px;
+   clear: none;
+   width: 0%;
+}
+
+#box {
+   float: left;
+   height: 293px;
+   margin-left: 0%;
+   margin-top: 0px;
+   clear: none;
+   width: 100%;
+   min-height: 50px;
+}
+
+#text {
+   float: left;
+   font-size: 100px;
+   width: 74.501434%;
+   height: auto;
+   text-align: center;
+   font-weight: normal;
+   line-height: 1em;
+   word-wrap: break-word;
+   margin-left: 12.748439%;
+   margin-top: 41px;
+   clear: none;
+   min-height: 112px;
+   font-style: normal;
+   font-family: brawler;
+}
+
+#text1 {
+   float: left;
+   font-size: 25px;
+   width: 74.501434%;
+   height: auto;
+   text-align: center;
+   font-weight: normal;
+   line-height: 1em;
+   word-wrap: break-word;
+   margin-left: 0%;
+   margin-top: 0px;
+   clear: both;
+   min-height: 112px;
+   font-style: normal;
+   font-family: brawler;
+}
+
+@media only screen and (max-width: 1024px) {
+   #text {
+       height: auto;
+       margin-top: 30px;
+       margin-left: 0%;
+       clear: none;
+       width: 100%;
+       min-height: 0px;
+   }
+
+   #text1 {
+       height: auto;
+       margin-top: 0px;
+       margin-left: 0%;
+       clear: both;
+       width: 100%;
+       min-height: 0px;
+       font-size: 25px;
+   }
+
+   #box {
+       height: 192px;
+   }
+
+   #box1 {
+       width: 0%;
+       height: 1px;
+   }
 }
 
