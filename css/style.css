@@ -1,7 +1,14 @@
-body {
-	background: silver;
-}
+@import url(normalize.css);
+header {
+  height: 84px;
+  background: white; }
 
-h1 {
-	color: green;
-}
+.container {
+  width: 90.625%;
+  margin: 0 auto; }
+
+.logo {
+  height: 100%; }
+
+body {
+  background: #29c7c8; }

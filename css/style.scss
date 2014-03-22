@@ -1,0 +1,24 @@
+@import "normalize.css";
+
+$purple: #ac72c3;
+$green: #36c77b;
+$orange: #e7604a;
+$blue: #29c7c8;
+
+header {
+	height: 84px;
+	background: white;
+
+}
+.container {
+	width: 90.625%;
+	margin: 0 auto;
+}
+
+.logo {
+	height: 100%;
+}
+
+body {
+	background: $blue;
+}
