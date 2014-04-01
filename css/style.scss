@@ -5,20 +5,120 @@ $green: #36c77b;
 $orange: #e7604a;
 $blue: #29c7c8;
 
+/*Google web font with 300, 400, 700 weights*/
+$font: 'Open Sans', sans-serif;
+$font-dark: #5a5b5f;
+$font-med: #93969f;
+$font-light: #bdbfc4;
+
+/* -----Logo Style----- */
+
 header {
 	height: 84px;
 	background: white;
 
 }
+
 .container {
 	width: 90.625%;
 	margin: 0 auto;
+	height: inherit;
+	background-color: white;
 }
 
-.logo {
-	height: 100%;
+#logo {
+	margin: 0 5px 7px 0;
+	display: inline-block;
 }
+
+#logo-text {
+	display: inline-block;
+} 
+
+#logo-name {
+	font-family: $font;
+	font-weight: 400;
+	font-size: 1.688em;
+	text-align: center;
+	line-height: 100%;
+	color: $font-dark;
+	margin-bottom: 0;
+} 
+
+#logo-slogan {
+	font-family: $font;
+	font-weight: 300;
+	font-size: 0.875em;
+	text-align: center;
+	line-height: 1em;
+	color: $font-dark;
+	margin: 0;
+} 
+
+/* -----Nav Style----- */
+
+nav {
+	float:right;
+	height: 84px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	height: 84px;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+	font-family: $font;
+	font-weight: 700;
+	font-size: 1em;
+	text-align: center;
+	line-height: px;
+	color: $font-med;
+	width: 95px;
+	padding: 31px 0;
+	margin: 0;
+	
+	:hover {
+		color: $font-light;
+	}
+}
+
+.active {
+	border-top: 2px solid $blue;
+	padding: 29px 0 30px 0;
+	color: $blue;
+	
+	:hover {
+		color: $blue;
+	}
+}
+
+/* -----Search Style----- */
+
+#search {
+	border-left: 1px solid #e2e8ea;
+	border-right: 1px solid #e2e8ea;
+	width: 77px;
+	margin: 0 8px;
+	
+}
+
+/* -----Body Style----- */
 
 body {
-	background: $blue;
+	background: $green;
+	height: auto;
+	
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+	
+	:hover {
+		cursor: pointer;
+	}
 }
