@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>logo</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <link xmlns="http://www.w3.org/1999/xhtml" href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#31EAEB" offset="0%"></stop>
+            <stop stop-color="#29C7C8" offset="63.8341422%"></stop>
+            <stop stop-color="#1E8B8B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup">
+            <path d="M352.204428,0 L671.795572,0 C773.211249,0 823.919063,0 878.503854,17.2595849 C938.101354,38.9513148 985.048644,85.8985813 1006.74042,145.496119 C1024,200.080937 1024,250.788775 1024,352.204428 L1024,671.795572 C1024,773.211249 1024,823.919063 1006.74042,878.503854 C985.048644,938.10146 938.10146,985.048644 878.503854,1006.74042 C823.919063,1024 773.211249,1024 671.795572,1024 L352.204428,1024 C250.788775,1024 200.080937,1024 145.496173,1006.74042 C85.8986189,985.048644 38.9513353,938.10146 17.2595917,878.503854 C0,823.919063 0,773.211249 0,671.795572 L0,352.204428 C0,250.788775 0,200.080937 17.2595883,145.496173 C38.9513284,85.8986052 85.8986189,38.9513148 145.496183,17.2595849 C200.080937,0 250.788775,0 352.204428,0 L352.204428,0" id="Shape" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+            <text id="dn" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Ubuntu" font-size="731.112" font-weight="normal" sketch:alignment="middle" letter-spacing="-100">
+                <tspan x="126.18831" y="765">dn</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

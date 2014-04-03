@@ -1,6 +1,6 @@
 <header>
 	<div class="container">
-		<img id="logo" src="img/logo.png" height="32" width="32" alt="|DN|"/>
+		<object type="image/svg+xml" data="img/logo.svg" id="logo"><img id="logo" src="img/logo.png" alt="|DN|"/></object>
 				
 		<div id="logo-text">
 		    <p id="logo-name">DERRIK NELSON</p>
@@ -24,10 +24,10 @@
 			    			$class4 = "class='active'";
 			    			break;
 			    		default:
-			    			$class1 = "";
-			    			$class2 = "";
-			    			$class3 = "";
-			    			$class4 = "";
+			    			$class2 = "class='null'";
+			    			$class3 = "class='null'";
+			    			$class1 = "class='null'";
+			    			$class4 = "class='null'";
 		    		}	
 		    		
 		    		echo '
@@ -35,7 +35,7 @@
 		    		<li ' . $class2 . '><a href="portfolio.php">PORTFOLIO</a></li>
 		    		<li ' . $class3 . '><a href="blog.php">BLOG</a></li>
 		     		<li ' . $class4 . '><a href="contact.php">CONTACT</a></li>
-		     		<li id="search"><img src="img/search.png" alt="search"/></li>';
+		     		<li id="search"><object type="image/svg+xml" data="img/search.svg"><img src="img/search.png" alt="search"/></object></li>';
 			 	?>
 		    </ul>
 		</nav>				

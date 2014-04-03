@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="583px" height="575px" viewBox="0 0 583 575" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Slice 1</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M560.180489,466.827675 L468.210965,374.858151 C489.076025,338.34569 501,296.065343 501,251 C501,112.928806 389.071194,1 251,1 C112.928806,1 1,112.928806 1,251 C1,389.071194 112.928806,501 251,501 C300.493464,501 346.627736,486.617599 385.451399,461.804213 L385.451399,461.804213 L476.033932,552.386745 C487.040263,565.600642 503.54735,574 522,574 C555.137087,574 582,546.913229 582,513.5 C582,494.712068 573.506745,477.924374 560.180489,466.827675 L560.180489,466.827675 Z M249,409 C339.574703,409 413,335.574703 413,245 C413,154.425297 339.574703,81 249,81 C158.425297,81 85,154.425297 85,245 C85,335.574703 158.425297,409 249,409 Z" id="Oval-1" stroke="#979797" fill="#BDBFC4" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
