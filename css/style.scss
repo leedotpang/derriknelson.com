@@ -27,14 +27,17 @@ header {
 }
 
 #logo {
-	height: 32px;
-	width: 32px;
-	margin: 0 5px 7px 0;
+	height: 40px;
+	width: 40px;
+	margin: 22px 8px 0 0;
 	display: inline-block;
+	vertical-align: top;
 }
 
 #logo-text {
 	display: inline-block;
+	vertical-align: top;
+	margin-top: 22px;
 } 
 
 #logo-name {
@@ -44,7 +47,7 @@ header {
 	text-align: center;
 	line-height: 100%;
 	color: $font-dark;
-	margin: 25px 0 0 0;
+	margin: 0;
 } 
 
 #logo-slogan {
@@ -52,7 +55,7 @@ header {
 	font-weight: 300;
 	font-size: 0.875em;
 	text-align: center;
-	line-height: 1em;
+	line-height: 100%;
 	color: $font-dark;
 	margin: 0;
 } 
@@ -143,10 +146,10 @@ a {
 	position: relative;
 	overflow: hidden;
 	
-	animation: fadein 0.85s ease-in;
-	-webkit-animation: fadein 0.85s ease-in;
-    -moz-animation: fadein 0.85s ease-in;
-    -ms-animation: fadein 0.85s ease-in;
+	animation: fadein 1s ease-in;
+	-webkit-animation: fadein 1s ease-in;
+    -moz-animation: fadein 1s ease-in;
+    -ms-animation: fadein 1s ease-in;
 	
 	.slides {
 		width: 100%;
