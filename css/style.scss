@@ -4,6 +4,8 @@ $purple: #ac72c3; /* RBG = 172,114,195 */
 $green: #36c77b;
 $orange: #e7604a;
 $blue: #29c7c8; /* RBG = 41,199,200 */
+$alt-bg: #fafcfc; /* Off-white background*/
+$border: #e8ebee;
 
 /*Google web font with 300, 400, 700 weights*/
 $font: 'Open Sans', sans-serif;
@@ -11,19 +13,60 @@ $font-dark: #5a5b5f;
 $font-med: #93969f;
 $font-light: #bdbfc4;
 
+/* --------------------------- */
+/* -----Global Tags Style----- */
+/* --------------------------- */
+
+body {
+	background: white;
+	min-width: 945px;
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+	
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+h2 {
+	font-family: $font;
+	font-weight: 400;
+	font-size: 1.429em;
+	color: $font-med;
+}
+
 /* -----Logo Style----- */
 
 header {
 	height: 84px;
-	background: white;
-
+	background-color: white;
 }
 
 .container {
 	width: 81.25%;
 	margin: 0 auto;
-	height: inherit;
-	background-color: white;
+	max-width: 1600px;
+}
+
+#home {
+	height: 84px;
+	width: auto;
+	float: left;
+	display: block;
+	border-top: 3px solid rgba(0,0,0,0);
+	box-sizing: border-box;
+	transition: border-top 0.3s;
+	-webkit-transition: border-top 0.3s;
+	
+	&:hover {
+		border-top: 3px solid $blue;
+	}
+}	
+#home:hover, #home:hover #logo-text {
+	color: $font-med;
 }
 
 #logo {
@@ -32,13 +75,18 @@ header {
 	margin: 22px 8px 0 0;
 	display: inline-block;
 	vertical-align: top;
+	cursor: default;
+	float: left;
 }
 
 #logo-text {
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 22px;
-} 
+	margin-top: 19px;
+	color: $font-dark;
+	transition: color 0.3s;
+	-webkit-transition: color 0.3s;	
+}
 
 #logo-name {
 	font-family: $font;
@@ -46,7 +94,6 @@ header {
 	font-size: 1.688em;
 	text-align: center;
 	line-height: 100%;
-	color: $font-dark;
 	margin: 0;
 } 
 
@@ -56,46 +103,45 @@ header {
 	font-size: 0.875em;
 	text-align: center;
 	line-height: 100%;
-	color: $font-dark;
 	margin: 0;
-} 
+}
 
 /* -----Nav Style----- */
 
 nav {
 	float:right;
 	height: 84px;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-	height: 84px;
-}
-
-li {
-	list-style-type: none;
-	display: inline-block;
-	font-family: $font;
-	font-weight: 700;
-	font-size: 1em;
-	text-align: center;
-	color: $font-med;
-	width: 95px;
-	padding: 31px 0;
-	margin: 0;
 	
-	transition: color 0.3s;
-	-webkit-transition: color 0.3s;
+	ul {
+		margin: 0;
+		padding: 0;
+		height: 84px;
+	}
 	
-	&:hover {
-		color:$font-light;
+	li {
+		list-style-type: none;
+		display: inline-block;
+		font-family: $font;
+		font-weight: 700;
+		font-size: 1em;
+		text-align: center;
+		color: $font-med;
+		width: 95px;
+		padding: 31px 0;
+		margin: 0;
+		
+		transition: color 0.3s;
+		-webkit-transition: color 0.3s;
+		
+		&:hover {
+			color:$font-light;
+		}
 	}
 }
 
 .active {
 	border-top: 3px solid $blue;
-	padding: 29px 0 29px 0;
+	padding: 29px 0 0 0;
 	color: $blue;
 	
 	&:hover {
@@ -122,22 +168,6 @@ li {
 	
 }
 
-/* -----Body Style----- */
-
-body {
-	background: white;
-	min-width: 945px;
-}
-
-a {
-	text-decoration: none;
-	color:inherit;
-	
-	&:hover {
-		cursor: pointer;
-	}
-}
-
 /* -----Image Carousel Style----- */
 
 #slides-container {
@@ -145,31 +175,33 @@ a {
 	height: 500px;
 	position: relative;
 	overflow: hidden;
+	z-index: 10;
 	
-	animation: fadein 1s ease-in;
-	-webkit-animation: fadein 1s ease-in;
-    -moz-animation: fadein 1s ease-in;
-    -ms-animation: fadein 1s ease-in;
+	animation: fadein 0.65s ease-in;
+	-webkit-animation: fadein 0.65s ease-in;
+    -moz-animation: fadein 0.65s ease-in;
+    -ms-animation: fadein 0.65s ease-in;
 	
 	.slides {
 		width: 100%;
 		height: 500px;
-		margin-left: -100%;
 		position: absolute;
 		left: 0;
 		right: 0;
-		z-index: 10;
-		animation: carousel 18s linear infinite;
-		-webkit-animation: carousel 18s linear infinite;
-		-moz-animation: carousel 18s linear infinite;
-		-ms-animation: carousel 18s linear infinite;
+		opacity: 1;
+		-webkit-transform: translateX(-100%);
+		
+		animation: carousel 18s infinite ease-in;
+		-webkit-animation: carousel 18s infinite ease-in;
+		-moz-animation: carousel 18s infinite ease-in;
+		-ms-animation: carousel 18s infinite ease-in;
 		
 		&:nth-child(1) {
-			background: url('../img/derrik-1.jpg') no-repeat right center;
+			background: url('../img/derrik-1.jpg') no-repeat left center;
 			background-size: cover;
 		}
 		&:nth-child(2) {
-			background: url('../img/derrik-2.jpg') no-repeat left center;
+			background: url('../img/derrik-2.jpg') no-repeat right center;
 			background-size: cover;
 			animation-delay: 6s;
 			-webkit-animation-delay: 6s;
@@ -187,84 +219,17 @@ a {
 	}
 }
 
-/* -----Animations----- */
-
-@keyframes carousel {
-	0%, 100% { margin-left: -100%; z-index: 10;}
-	3%, 33.333% { margin-left: 0; z-index: 10;}
-	36.333% { margin-left: 100%; z-index: 10;}
-	37% { margin-left: -100%; z-index: 0;}
-	99% { margin-left: -100%; z-index: 0;}
-}
-@-webkit-keyframes carousel {
-	0%, 100% { margin-left: -100%; z-index: 10;}
-	3%, 33.333% { margin-left: 0; z-index: 10;}
-	36.333% { margin-left: 100%; z-index: 10;}
-	37% { margin-left: -100%; z-index: 0;}
-	99% { margin-left: -100%; z-index: 0;}
-}
-@-moz-keyframes carousel {
-	0%, 100% { margin-left: -100%; z-index: 10;}
-	3%, 33.333% { margin-left: 0; z-index: 10;}
-	36.333% { margin-left: 100%; z-index: 10;}
-	37% { margin-left: -100%; z-index: 0;}
-	99% { margin-left: -100%; z-index: 0;}
-}
-@-ms-keyframes carousel {
-	0%, 100% { margin-left: -100%; z-index: 10;}
-	3%, 33.333% { margin-left: 0; z-index: 10;}
-	36.333% { margin-left: 100%; z-index: 10;}
-	37% { margin-left: -100%; z-index: 0;}
-	99% { margin-left: -100%; z-index: 0;}
-}
-
-
-@keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
-}
-@-webkit-keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
-}
-@-moz-keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
-}
-@-ms-keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
-}
-
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* ----- Return to Image Carousel Style----- */
+/* ----- Surface of Carousel Style----- */
 
 .slide-surface {
 	background-image: linear-gradient(rgba(41,199,200,0) 50%, 
 					    			rgba(41,199,200,0.1) 60%,
 					    			rgba(41,199,200,0.27) 70%, 
 					    			rgba(41,199,200,0.7) 99%),
-			radial-gradient(circle, rgba(0,0,0,0.45) 0%, 
-					    			rgba(0,0,0,0.35) 25%,
-					    			rgba(0,0,0,0.25) 40%,
-					    			rgba(0,0,0,0) 50%);
+			radial-gradient(circle, rgba(0,0,0,0.50) 0, 
+					    			rgba(0,0,0,0.45) 65px,
+					    			rgba(0,0,0,0.32) 140px,
+					    			rgba(0,0,0,0) 300px);
 	background-size: cover; 
 	background-repeat: no-repeat;
 	text-align: center;
@@ -273,10 +238,10 @@ a {
 	position: relative;
 	z-index: 20;
     
-    animation: fadein 0.85s ease-in;
-	-webkit-animation: fadein 0.85s ease-in;
-    -moz-animation: fadein 0.85s ease-in;
-    -ms-animation: fadein 0.85s ease-in;
+    animation: fadein 0.9s ease-out;
+	-webkit-animation: fadein 0.9s ease-out;
+    -moz-animation: fadein 0.9s ease-out;
+    -ms-animation: fadein 0.9s ease-out;
     	
 	h1 {
 		font-size: 2.625em;
@@ -306,19 +271,21 @@ a {
 		line-height: 150%;
 		margin: 0;
 		padding-top: 36px;
+		font-style: italic;
 	}
 	
 	button {
-		width: 193px;
+		width: 192px;
 		height: 50px;
+		margin: 35px auto 0 auto;
+		display: block;
+		
 		font-size: 1em;
 		font-family: $font;
 		font-weight: 700;
 		color: white;
 		line-height: 100%;
 		
-		margin: 35px auto 0 auto;
-		display: block;
 		
 		background: rgba(172,114,195,0);
 		border: 1px solid white;
@@ -329,7 +296,7 @@ a {
 		-webkit-transition: background-color 0.4s, border 0.1s; 
 		
 		&:hover {
-			background-color: rgba(172,114,195,1);
+			background-color: $purple;
 			border: 1px solid $purple;
 		}
 	}
@@ -362,6 +329,206 @@ a {
 		-ms-animation-delay: 12s;
 	}
 }
+
+/* -----Animations----- */
+
+@keyframes carousel {
+	0% {opacity: 1; transform: translateX(-100%);}
+	3%, 33.33333333% { transform: translateX(0);}
+	36.33333333% { opacity: 1; transform: translateX(100%);}
+	37% { opacity: 0;}
+	85% { transform: translateX(-100%);}
+	100% { opacity: 0;}
+}
+
+@-webkit-keyframes carousel {
+	0% {opacity: 1; -webkit-transform: translateX(-100%);}
+	3%, 33.33333333% { -webkit-transform: translateX(0);}
+	36.33333333% { opacity: 1; -webkit-transform: translateX(100%);}
+	37% { opacity: 0;}
+	85% { -webkit-transform: translateX(-100%);}
+	100% { opacity: 0;}
+}
+/*
+@-moz-keyframes carousel {
+	0% {opacity: 1; -moz-transform: translateX(-100%);}
+	3%, 33.333% { -moz-transform: translateX(0);}
+	36.333% { opacity: 1; -moz-transform: translateX(100%);}
+	37% { opacity: 0;}
+	85% { -moz-transform: translateX(-100%);}
+	100% { opacity: 0;}
+}
+
+@-ms-keyframes carousel {
+	0% {opacity: 1; -ms-transform: translateX(-100%);}
+	3%, 33.333% { -ms-transform: translateX(0);}
+	36.333% { opacity: 1; -ms-transform: translateX(100%);}
+	37% { opacity: 0;}
+	85% { -ms-transform: translateX(-100%);}
+	100% { opacity: 0;}
+}
+*/
+
+/*–––––––––––––––––––*/
+
+@keyframes active-dot {
+	0%, 37%, 100% { background-color: $font-light;}
+	3%, 34% { background-color: $orange;}
+}
+@-webkit-keyframes active-dot {
+	0%, 37%, 100% { background-color: $font-light;}
+	3%, 34% { background-color: $orange;}
+}
+@-moz-keyframes active-dot {
+	0%, 37%, 100% { background-color: $font-light;}
+	3%, 34% { background-color: $orange;}
+}
+@-ms-keyframes active-dot {
+	0%, 37%, 100% { background-color: $font-light;}
+	3%, 34% { background-color: $orange;}
+}
+
+/*–––––––––––––––––––*/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* -----Services Style----- */
+
+#services-wrap {
+	
+}
+
+.services {
+	display: inline-block;
+	width: 25%;
+	margin: 0 auto;
+	padding: 90px 0;
+	float: left;
+	text-align: center;
+	
+	div {
+		height: 120px;
+		width: 120px;
+		margin: 0 auto;
+		border-radius: 60px;
+
+		img {
+			margin-top: 35px;
+		}
+	}
+	p {
+		font-family: $font;
+		font-weight: 400;
+		font-size: 0.938em;
+		color: $font-light;
+		padding: 0 10px;
+	}	
+}	
+
+#pen {
+
+	div {
+    	background-color: $orange; 
+    }
+    button {
+		color: $orange;
+    	
+    	&:hover {
+			background-color: $alt-bg;
+			border: 1px solid $orange;
+		}    
+	}
+}
+
+#code {
+
+	div {
+    	background-color: $purple; 
+    }
+    button {
+		color: $purple;
+    	
+    	&:hover {
+			background-color: $alt-bg;
+			border: 1px solid $purple;
+		}    
+	}
+}
+
+
+#preserver {
+
+	div {
+    	background-color: $green; 
+    }
+    button {
+		color: $green;
+    	
+    	&:hover {
+			background-color: $alt-bg;
+			border: 1px solid $green;
+		}    
+	}
+}
+
+#bulb {
+
+	div {
+    	background-color: $blue; 
+    }
+    button {
+		color: $blue;
+    	
+    	&:hover {
+			background-color: $alt-bg;
+			border: 1px solid $blue;
+		}    
+	}
+}
+
+
+
+
+.read-more {
+	display: block;
+	width: 150px;
+	height: 42px;
+	margin: 30px auto 0 auto;
+	border: 1px solid $border;
+	border-radius: 6px;
+	background: white;
+	
+	font-size: 0.875em;
+	font-family: $font;
+	font-weight: 700;
+	line-height: 100%;
+	
+	transition: background-color 0.4s, border 0.4s; 
+	-webkit-transition: background-color 0.4s, border 0.4s; 
+}
+
+
+
+
+
+
+
 
 
 
