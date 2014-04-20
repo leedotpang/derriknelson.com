@@ -34,28 +34,28 @@
 	
 	<div class="container" id="services-wrap">
 		<div class="services" id="pen">
-			<div><img src="img/pen.png"/></div>
-			<h2>MODERN DESIGN</h2>
+			<div><object type="image/svg+xml" data="img/pen.svg"><img src="img/pen.png" alt=""/></object></div>
+			<h2>WRITER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>
 		
-		<div class="services" id="code">
-			<div><img src="img/code.png"/></div>
-			<h2>DOER</h2>
+		<div class="services" id="compose">
+			<div><object type="image/svg+xml" data="img/note.svg"><img src="img/note.png" alt=""/></object></div>
+			<h2>COMPOSER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>
 		
 		<div class="services" id="preserver">
-			<div><img src="img/preserver.png"/></div>
+			<div><object type="image/svg+xml" data="img/preserver.svg"><img src="img/preserver.png" alt=""/></object></div>
 			<h2>SAVER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>
 		
 		<div class="services" id="bulb">
-			<div><img src="img/bulb.png"/></div>
+			<div><object type="image/svg+xml" data="img/bulb.svg"><img src="img/bulb.png" alt=""/></object></div>
 			<h2>THINKER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>

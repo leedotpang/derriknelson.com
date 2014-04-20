@@ -18,7 +18,7 @@ $font-light: #bdbfc4;
 /* --------------------------- */
 
 body {
-	background: white;
+	background-color: white;
 	min-width: 945px;
 }
 
@@ -292,8 +292,8 @@ nav {
 		border-radius: 7px;
 		outline: none;
 
-		transition: background-color 0.4s, border 0.1s; 
-		-webkit-transition: background-color 0.4s, border 0.1s; 
+		transition: background-color 0.4s, border 0.3s; 
+		-webkit-transition: background-color 0.4s, border 0.3s; 
 		
 		&:hover {
 			background-color: $purple;
@@ -304,8 +304,9 @@ nav {
 	.dot {
 		width: 12px;
 		height: 12px;
-		border-radius: 6px;
-		background-color: $font-light;
+		border-radius: 8px;
+		border: 1px solid white;
+		background-color: rgba(0,0,0,0);
 		display: inline-block;
 		margin: 61px 3px 0 3px;
 		
@@ -333,59 +334,58 @@ nav {
 /* -----Animations----- */
 
 @keyframes carousel {
-	0% {opacity: 1; transform: translateX(-100%);}
-	3%, 33.33333333% { transform: translateX(0);}
-	36.33333333% { opacity: 1; transform: translateX(100%);}
+	0% {opacity: 1; transform: translate3d(-100%,0,0);}
+	3%, 33.33333333% { transform: translate3d(0,0,0);}
+	36.33333333% { opacity: 1; transform: translate3d(100%,0,0);}
 	37% { opacity: 0;}
-	85% { transform: translateX(-100%);}
+	85% { transform: translate3d(-100%,0,0);}
 	100% { opacity: 0;}
 }
 
 @-webkit-keyframes carousel {
-	0% {opacity: 1; -webkit-transform: translateX(-100%);}
-	3%, 33.33333333% { -webkit-transform: translateX(0);}
-	36.33333333% { opacity: 1; -webkit-transform: translateX(100%);}
+	0% {opacity: 1; -webkit-transform: translate3d(-100%,0,0);}
+	3%, 33.33333333% { -webkit-transform: translate3d(0,0,0);}
+	36.33333333% { opacity: 1; -webkit-transform: translate3d(100%,0,0);}
 	37% { opacity: 0;}
-	85% { -webkit-transform: translateX(-100%);}
+	85% { -webkit-transform: translate3d(-100%,0,0);} 
 	100% { opacity: 0;}
 }
-/*
+
 @-moz-keyframes carousel {
-	0% {opacity: 1; -moz-transform: translateX(-100%);}
-	3%, 33.333% { -moz-transform: translateX(0);}
-	36.333% { opacity: 1; -moz-transform: translateX(100%);}
+	0% {opacity: 1; -moz-transform: translate3d(-100%,0,0);}
+	3%, 33.33333333% { -moz-transform: translate3d(0,0,0);}
+	36.33333333% { opacity: 1; -moz-transform: translate3d(100%,0,0);}
 	37% { opacity: 0;}
-	85% { -moz-transform: translateX(-100%);}
+	85% { -moz-transform: translate3d(-100%,0,0);} 
 	100% { opacity: 0;}
 }
 
 @-ms-keyframes carousel {
-	0% {opacity: 1; -ms-transform: translateX(-100%);}
-	3%, 33.333% { -ms-transform: translateX(0);}
-	36.333% { opacity: 1; -ms-transform: translateX(100%);}
+	0% {opacity: 1; -ms-transform: translate3d(-100%,0,0);}
+	3%, 33.33333333% { -ms-transform: translate3d(0,0,0);}
+	36.33333333% { opacity: 1; -ms-transform: translate3d(100%,0,0);}
 	37% { opacity: 0;}
-	85% { -ms-transform: translateX(-100%);}
+	85% { -ms-transform: translate3d(-100%,0,0);} 
 	100% { opacity: 0;}
 }
-*/
 
 /*–––––––––––––––––––*/
 
 @keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
+	0%, 37%, 100% { background-color: rgba(0,0,0,0);}
+	3%, 34% { background-color: white;}
 }
 @-webkit-keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
+	0%, 37%, 100% { background-color: rgba(0,0,0,0);}
+	3%, 34% { background-color: white;}
 }
 @-moz-keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
+	0%, 37%, 100% { background-color: rgba(0,0,0,0);}
+	3%, 34% { background-color: white;}
 }
 @-ms-keyframes active-dot {
-	0%, 37%, 100% { background-color: $font-light;}
-	3%, 34% { background-color: $orange;}
+	0%, 37%, 100% { background-color: rgba(0,0,0,0);}
+	3%, 34% { background-color: white}
 }
 
 /*–––––––––––––––––––*/
@@ -410,10 +410,6 @@ nav {
 
 /* -----Services Style----- */
 
-#services-wrap {
-	
-}
-
 .services {
 	display: inline-block;
 	width: 25%;
@@ -428,7 +424,7 @@ nav {
 		margin: 0 auto;
 		border-radius: 60px;
 
-		img {
+		img, object {
 			margin-top: 35px;
 		}
 	}
@@ -456,10 +452,14 @@ nav {
 	}
 }
 
-#code {
+#compose {
 
 	div {
     	background-color: $purple; 
+    	
+    	object {
+	    	margin-left: -5px; //visually center music note
+    	}
     }
     button {
 		color: $purple;
@@ -522,12 +522,6 @@ nav {
 	transition: background-color 0.4s, border 0.4s; 
 	-webkit-transition: background-color 0.4s, border 0.4s; 
 }
-
-
-
-
-
-
 
 
 
