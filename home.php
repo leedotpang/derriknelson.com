@@ -32,7 +32,7 @@
 
 <!------Services Blocks------>
 	
-	<div class="container" id="services-wrap">
+	<div class="container">
 		<div class="services" id="pen">
 			<div><object type="image/svg+xml" data="img/pen.svg"><img src="img/pen.png" alt=""/></object></div>
 			<h2>WRITER</h2>

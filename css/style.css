@@ -128,11 +128,7 @@ nav {
   height: 500px;
   position: relative;
   overflow: hidden;
-  z-index: 10;
-  animation: fadein 0.65s ease-in;
-  -webkit-animation: fadein 0.65s ease-in;
-  -moz-animation: fadein 0.65s ease-in;
-  -ms-animation: fadein 0.65s ease-in; }
+  z-index: 10; }
   #slides-container .slides {
     width: 100%;
     height: 500px;
@@ -141,6 +137,7 @@ nav {
     right: 0;
     opacity: 1;
     -webkit-transform: translateX(-100%);
+    -webkit-backface-visibility: hidden;
     animation: carousel 18s infinite ease-in;
     -webkit-animation: carousel 18s infinite ease-in;
     -moz-animation: carousel 18s infinite ease-in;
@@ -389,7 +386,6 @@ nav {
 
 /* -----Services Style----- */
 .services {
-  display: inline-block;
   width: 25%;
   margin: 0 auto;
   padding: 90px 0;
@@ -444,7 +440,6 @@ nav {
     border: 1px solid #29c7c8; }
 
 .read-more {
-  display: block;
   width: 150px;
   height: 42px;
   margin: 30px auto 0 auto;
