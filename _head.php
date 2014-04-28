@@ -7,5 +7,8 @@
 	
 	<link rel="stylesheet" href="css/style.css">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/glide.min.js"></script>
 	';
 ?>

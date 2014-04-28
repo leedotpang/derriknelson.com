@@ -2,8 +2,8 @@
 <html lang="en-US">
 	<head>
 		<?php
-		$page = "Home";
-		include("_head.php");
+			$page = "Home";
+			include("_head.php");
 		?>
 	</head>
 	
@@ -14,22 +14,35 @@
 
 <!------Image Slider------>
 
-	<div id="slides-container">
-		<div class="slides"></div>
-		<div class="slides"></div>
-		<div class="slides"></div>
+	<div class="slider">
+		<ul class="slides">
+			<li class="slide" id="slide1"></li>
+			<li class="slide" id="slide2"></li>
+			<li class="slide" id="slide3"></li>
+		</ul>
 	</div>
 	
-	<div class="slide-surface">
+	
+	<div class="surface">
+		<object type="image/svg+xml" data="img/arrow-left.svg" id="left-arrow"></object>
+		<object type="image/svg+xml" data="img/arrow-right.svg" id="right-arrow"></object>
+	    
 	    <h1>WELCOME</h1>
 	    <h2>I'm Derrik Nelson</h2>
 	    <h3>"Creating something incredible is my passion.<br>Composition is my niche."</h3>
-	    <button>Learn More</button>
-	    <div class="dot" id="dot-1"></div>
-	    <div class="dot" id="dot-2"></div>
-	    <div class="dot" id="dot-3"></div>
+	    <a id="learn-more" href="portfolio.php">Learn More</a>
 	</div>	
 
+	<script>
+    	$('.slider').glide({
+    	    autoplay: 5000,
+    	    arrows: '.surface',
+    	    arrowLeftText: false,
+    	    arrowRightText: false,
+    	    navigation: '.surface'
+    	});
+	</script>
+	
 <!------Services Blocks------>
 	
 	<div class="container">
@@ -40,7 +53,7 @@
 			<button class="read-more">READ MORE</button>
 		</div>
 		
-		<div class="services" id="compose">
+		<div class="services" id="note">
 			<div><object type="image/svg+xml" data="img/note.svg"><img src="img/note.png" alt=""/></object></div>
 			<h2>COMPOSER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
@@ -49,7 +62,7 @@
 		
 		<div class="services" id="preserver">
 			<div><object type="image/svg+xml" data="img/preserver.svg"><img src="img/preserver.png" alt=""/></object></div>
-			<h2>SAVER</h2>
+			<h2>LEADER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>

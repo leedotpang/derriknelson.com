@@ -12,11 +12,10 @@
 		<nav>
 		    <ul>
 		    	<?php	//Switch case to add the .active class to the current tab in the nav
-			    	$class1 = "";
-			    	$class2 = "";
-			    	$class3 = "";
-			    	$class4 = "";
-		    		
+			   	$class1 = "";
+			   	$class2 = "";
+			   	$class3 = "";
+			   	$class4 = "";
 		    		switch($page) {
 			    		case("Home"):
 			    			$class1 = "class='active'";
