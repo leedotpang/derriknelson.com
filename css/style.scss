@@ -20,8 +20,24 @@ $font-light: #bdbfc4;
 body {
 	background-color: white;
 	min-width: 960px;
+/*
+	-webkit-animation: blur 1.5s ease-in;
+	animation-iteration-count: 1;
+	-webkit-filter: blur(0);
+	-moz-filter: blur(5px);
+*/	 
 }
 
+/*
+@-webkit-keyframes blur {
+	from {-webkit-filter: blur(5px);
+			-moz-filter: blur(5px);		
+	}
+	to {-webkit-filter: blur(0);
+		-moz-filter: blur(5px);
+	}
+}
+*/
 
 a {
 	text-decoration: none;
@@ -214,7 +230,7 @@ nav {
 .slider-nav {
 	z-index: 21;
 	position: absolute;
-	bottom: 30px; //only necessary if navigation is not appended to .surface
+	bottom: 30px; 
 }
 
 .slider-nav__item {
@@ -243,7 +259,8 @@ nav {
 	position: absolute;
 	height: 500px;
 	width: 100%;
-	margin-top: -390px;
+	margin-top: -500px;
+	pointer-events: auto;
 }
 
 .slider-arrow--left {
@@ -286,14 +303,14 @@ nav {
     position: absolute;
     left: 4%;
     margin-top: 200px;
-    z-index: 11;
+    z-index: 22;
 }	
 	
 #right-arrow {
 	position: absolute;
     right: 4%;
     margin-top: 200px;
-    z-index: 11;
+    z-index: 22;
 }		
 
 
@@ -316,6 +333,7 @@ nav {
 	margin-top: -500px;
 	position: relative;
 	z-index: 20;
+	pointer-events: none;
     	
 	h1 {
 		font-size: 2.625em;
@@ -356,6 +374,7 @@ nav {
     display: block;
     position: relative;
     z-index: 21;
+    pointer-events: auto;
     
     font-size: 1em;
     font-family: $font;

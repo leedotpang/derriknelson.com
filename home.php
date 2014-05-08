@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
+			<title>Home – Derrik Nelson</title>
 		<?php
 			$page = "Home";
 			include("_head.php");
@@ -21,8 +22,7 @@
 			<li class="slide" id="slide3"></li>
 		</ul>
 	</div>
-	
-	
+		
 	<div class="surface">
 		<object type="image/svg+xml" data="img/arrow-left.svg" id="left-arrow"></object>
 		<object type="image/svg+xml" data="img/arrow-right.svg" id="right-arrow"></object>
@@ -36,10 +36,8 @@
 	<script>
     	$('.slider').glide({
     	    autoplay: 5000,
-    	    arrows: '.surface',
     	    arrowLeftText: false,
-    	    arrowRightText: false,
-    	    navigation: '.surface'
+    	    arrowRightText: false
     	});
 	</script>
 	

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
+		<title>Portfolio – Derrik Nelson</title>
 		<?php
 		$page = "Portfolio";
 		include("_head.php");
