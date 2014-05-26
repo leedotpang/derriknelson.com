@@ -1,8 +1,8 @@
 <header>
 	<div class="container">
-		<object type="image/svg+xml" data="img/logo.svg" id="logo"><img id="logo" src="img/logo.png" alt="|DN|"/></object>
+		<img src="img/logo.svg" id="logo">
 		    
-		<div id="home"><a href="home.php">
+		<div id="home"><a href="index.php">
 		    <div id="logo-text">
 		    	<p id="logo-name">DERRIK NELSON</p>
 		    	<p id="logo-slogan">composition|counseling|christianity</p>
@@ -32,11 +32,11 @@
 		    		}	
 		    		
 		    		echo '
-		    		<li ' . $class1 . '><a href="home.php">HOME</a></li>
+		    		<li ' . $class1 . '><a href="index.php">HOME</a></li>
 		    		<li ' . $class2 . '><a href="portfolio.php">PORTFOLIO</a></li>
 		    		<li ' . $class3 . '><a href="blog.php">BLOG</a></li>
 		     		<li ' . $class4 . '><a href="contact.php">CONTACT</a></li>
-		     		<li id="search"><object type="image/svg+xml" data="img/search.svg"><img src="img/search.png" alt="search"/></object></li>';
+		     		<li id="search"><img src="img/search.svg" alt="search"/></li>';
 			 	?>
 		    </ul>
 		</nav>				

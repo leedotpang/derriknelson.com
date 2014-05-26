@@ -24,8 +24,8 @@
 	</div>
 		
 	<div class="surface">
-		<object type="image/svg+xml" data="img/arrow-left.svg" id="left-arrow"></object>
-		<object type="image/svg+xml" data="img/arrow-right.svg" id="right-arrow"></object>
+		<img src="img/arrow.svg" id="left-arrow"></img>
+		<img src="img/arrow.svg" id="right-arrow"></img>
 	    
 	    <h1>WELCOME</h1>
 	    <h2>I'm Derrik Nelson</h2>
@@ -34,44 +34,52 @@
 	</div>	
 
 	<script>
-    	$('.slider').glide({
-    	    autoplay: 5000,
-    	    arrowLeftText: false,
-    	    arrowRightText: false
-    	});
+    	$(window).bind("load", function() {
+    		$('.slider').glide({
+    		    autoplay: 5000,
+    		    hoverpause: false,
+    		    arrowLeftText: false,
+    		    arrowRightText: false
+    		});
+		});	
 	</script>
 	
 <!------Services Blocks------>
 	
 	<div class="container">
 		<div class="services" id="pen">
-			<div><object type="image/svg+xml" data="img/pen.svg"><img src="img/pen.png" alt=""/></object></div>
+			<div><img src="img/pen.svg" alt=""/></div>
 			<h2>WRITER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>
 		
 		<div class="services" id="note">
-			<div><object type="image/svg+xml" data="img/note.svg"><img src="img/note.png" alt=""/></object></div>
+			<div><img src="img/note.svg" alt=""/></div>
 			<h2>COMPOSER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>
 		
 		<div class="services" id="preserver">
-			<div><object type="image/svg+xml" data="img/preserver.svg"><img src="img/preserver.png" alt=""/></object></div>
+			<div><img src="img/preserver.svg" alt=""/></div>
 			<h2>LEADER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>
 		
 		<div class="services" id="bulb">
-			<div><object type="image/svg+xml" data="img/bulb.svg"><img src="img/bulb.png" alt=""/></object></div>
+			<div><img src="img/bulb.svg" alt=""/></div>
 			<h2>THINKER</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 			<button class="read-more">READ MORE</button>
 		</div>
 	</div>
-
+	
+	<footer>
+		<?php 
+			include("_footer.php");
+		?>
+	</footer>	
 </html>
    
