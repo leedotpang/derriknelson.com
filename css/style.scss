@@ -1,8 +1,8 @@
-@import "normalize.css";
+@import 'normalize';
 
+$orange: #e7604a;
 $purple: #ac72c3; /* RBG = 172,114,195 */
 $green: #36c77b;
-$orange: #e7604a;
 $blue: #29c7c8; /* RBG = 41,199,200 */
 $alt-bg: #fafcfc; /* Off-white background*/
 $border: #e8ebee;
@@ -16,26 +16,25 @@ $font-light: #bdbfc4;
 /* --------------------------- */
 /* -----Global Tags Style----- */
 /* --------------------------- */
+html {
+	height: 100%;
+}
 
 body {
+	height: 100%;
 	background-color: white;
 	min-width: 960px;
 /*
 	-webkit-animation: blur 1.5s ease-in;
 	animation-iteration-count: 1;
 	-webkit-filter: blur(0);
-	-moz-filter: blur(5px);
 */	 
 }
 
 /*
 @-webkit-keyframes blur {
-	from {-webkit-filter: blur(5px);
-			-moz-filter: blur(5px);		
-	}
-	to {-webkit-filter: blur(0);
-		-moz-filter: blur(5px);
-	}
+	from {-webkit-filter: blur(5px);}
+	to {-webkit-filter: blur(0);}
 }
 */
 
@@ -77,7 +76,6 @@ header {
 	border-top: 3px solid rgba(0,0,0,0);
 	box-sizing: border-box;
 	transition: border-top 0.3s;
-	-webkit-transition: border-top 0.3s;
 	
 	&:hover {
 		border-top: 3px solid $blue;
@@ -93,8 +91,8 @@ header {
 	margin: 22px 8px 0 0;
 	display: inline-block;
 	vertical-align: top;
-	cursor: default;
 	float: left;
+	pointer-events: none;
 }
 
 #logo-text {
@@ -103,7 +101,6 @@ header {
 	margin-top: 19px;
 	color: $font-dark;
 	transition: color 0.3s;
-	-webkit-transition: color 0.3s;	
 }
 
 #logo-name {
@@ -145,11 +142,11 @@ nav {
 		text-align: center;
 		color: $font-med;
 		width: 95px;
-		padding: 31px 0;
+		padding-top: 28px;
 		margin: 0;
+		box-sizing: border-box;
 		
 		transition: color 0.3s;
-		-webkit-transition: color 0.3s;
 		
 		&:hover {
 			color:$font-light;
@@ -159,11 +156,10 @@ nav {
 
 .active {
 	border-top: 3px solid $blue;
-	padding: 29px 0 0 0;
 	color: $blue;
 	
 	&:hover {
-		color: $blue;	
+		color: $blue;
 	}
 }
 
@@ -179,7 +175,7 @@ nav {
 	width: 77px;
 	margin: 0 8px;
 	
-	object {
+	img {
 		width: 16px;
 		height: 16px;
 	}
@@ -194,14 +190,12 @@ nav {
 	height: 500px;
 	overflow: hidden;
 	z-index: 10;
+	background-color: $font-dark;
 }
 
 .slides {
 	height: 100%;
 	overflow: hidden;
-	zoom: 1;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform-style: preserve-3d;
 	padding: 0;
 	margin: 0;
 
@@ -274,7 +268,6 @@ nav {
     											rgba(41,199,200,0.15) 60%,
     											rgba(41,199,200,0.45) 100%);
     transition: opacity 0.4s;										 
-    -webkit-transition: opacity 0.4s;										 
     
     &:hover {
     	opacity: 1;
@@ -292,7 +285,6 @@ nav {
     											rgba(41,199,200,0.15) 60%,
     											rgba(41,199,200,0.45) 100%);
     transition: opacity 0.4s;										 
-    -webkit-transition: opacity 0.4s;										 
     
     &:hover {
     	opacity: 1;
@@ -304,6 +296,7 @@ nav {
     left: 4%;
     margin-top: 200px;
     z-index: 22;
+    transform: rotate(180deg); //rotate so arrow points the opposite direction
 }	
 	
 #right-arrow {
@@ -333,6 +326,7 @@ nav {
 	margin-top: -500px;
 	position: relative;
 	z-index: 20;
+	-webkit-font-smoothing: antialiased;
 	pointer-events: none;
     	
 	h1 {
@@ -387,7 +381,6 @@ nav {
     border-radius: 7px;
 
     transition: background-color 0.4s, border 0.3s; 
-    -webkit-transition: background-color 0.4s, border 0.3s; 
     
     &:hover {
     	background-color: $purple;
@@ -411,7 +404,7 @@ nav {
 		margin: 0 auto;
 		border-radius: 60px;
 
-		img, object {
+		img {
 			margin-top: 35px;
 		}
 	}
@@ -444,7 +437,7 @@ nav {
 	div {
     	background-color: $purple; 
     	
-    	object {
+    	img {
 	    	margin-left: -5px; //visually center music note
     	}
     }
@@ -503,10 +496,82 @@ nav {
 	line-height: 100%;
 	
 	transition: background-color 0.4s, border 0.4s; 
-	-webkit-transition: background-color 0.4s, border 0.4s; 
+}
+
+// 404 style
+#fourohfour {
+	text-align: center;
+	height: calc(100% - 334px);
+	min-height: 365px;
+	font-family: $font;
+	background-color: $alt-bg;
+	
+	span {
+		color: $blue;
+		font-size: 150px;
+		line-height: 150%;
+	}
+	p {
+		color: $font-med;
+		font-size: 20px;
+		margin-top: -20px;
+		line-height: 200%;
+	}
+	li {
+		list-style-type: none;
+		margin: 0 auto;
+		border: none;
+		padding-bottom: 35px;
+		
+		img {
+			width: 42px;
+			height: 42px;
+		}
+	}
+}
+
+//Footer
+footer {
+	height: 250px;
+	color: $alt-bg;
+	background-color: $font-dark;
+	clear: both;
+}
+
+// Strip of four colors over footer
+#color-bar {
+	width: 100%;
+	height: 3px;
+	
+	div {
+		width: 25%;
+		height: inherit;
+		float: left;
+	}
 }
 
 
+// Experimental
+
+// iPad/screens under 1024px width 
+/*
+@media (max-width: 1024px) {
+	#left-arrow, #right-arrow, .slider-arrows {
+		display: none;
+	}
+	.slider {
+		height: 400px;
+	}
+	.surface {
+		height: 400px;
+		margin-top: -400px;
+	}
+	#learn-more {
+    	background-color: $purple;
+    	border: 1px solid $purple;
+    }
+}
+*/
 
 
 
