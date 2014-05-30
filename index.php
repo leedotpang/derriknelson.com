@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-			<title>Home – Derrik Nelson</title>
+		<title>Home – Derrik Nelson</title>
 		<?php
 			$page = "Home";
 			include("_head.php");
 		?>
 	</head>
 	
-	<body>
-	<?php 
-	include("_header.php");
-	?>
-
-<!------Image Slider------>
+<body>
+	<header>
+		<?php include("_header.php"); ?>
+	</header>
+	
+<!-----Image Slider------>
 
 	<div class="slider">
 		<ul class="slides">
@@ -75,11 +75,11 @@
 			<button class="read-more">READ MORE</button>
 		</div>
 	</div>
-	
 	<footer>
 		<?php 
 			include("_footer.php");
 		?>
 	</footer>	
+</body>
 </html>
    
