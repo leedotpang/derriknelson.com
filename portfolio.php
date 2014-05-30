@@ -8,11 +8,13 @@
 		?>
 	</head>
 	
-	<body>
-		<?php 
-		include("_header.php"); 
-		?>
-				
-	</body>
+<body>
+	<header>
+		<?php include("_header.php"); ?>
+	</header>
+	<footer>
+		<?php include("_footer.php"); ?>
+	</footer>
+</body>
 
 </html>
